@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Hello from deploy stage'
-            
+            }
         }
         stage('Test') {
             steps {
@@ -22,6 +22,11 @@ pipeline {
             steps {
                 echo 'Hello from release stage'
             }
+        }
+    }
+    post {
+        failure {
+            echo 'Pipeline failed'
         }
     }
 }
