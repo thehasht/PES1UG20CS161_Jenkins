@@ -4,18 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'mvn clean install'
                 echo 'Hello from build stage'
                 echo 'Hello from build stage 2'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'mv deploy'
+                sh 'mvn deploy'
                 echo 'Hello from deploy stage'
             }
         }
         stage('Test') {
             steps {
+                sh 'mav test'
                 echo 'Hello from test stage'
             }
         }
