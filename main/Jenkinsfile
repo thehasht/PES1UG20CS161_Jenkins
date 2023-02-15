@@ -8,10 +8,10 @@ pipeline {
                 echo 'Hello from build stage 2'
             }
         }
-        stage('Deploys') {
+        stage('Deploy') {
             steps {
                 echo 'Hello from deploy stage'
-            }
+            
         }
         stage('Test') {
             steps {
