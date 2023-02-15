@@ -9,13 +9,13 @@ pipeline {
             }
         }
         stage('Deploy') {
-            step {
+            steps {
                 echo 'Hello from deploy stage'
             }
         }
         stage('Test') {
             steps {
-                echo 'Hello from test stage'
+                echo 'Hello from test stage
             }
         }
         stage('Release') {
