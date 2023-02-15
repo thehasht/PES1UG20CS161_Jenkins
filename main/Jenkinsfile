@@ -10,12 +10,13 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh 'mv deploy'
                 echo 'Hello from deploy stage'
             }
         }
         stage('Test') {
             steps {
-                echo 'Hello from test stage
+                echo 'Hello from test stage'
             }
         }
         stage('Release') {
